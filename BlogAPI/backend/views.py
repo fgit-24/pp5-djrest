@@ -33,6 +33,19 @@ def article_details(request, slug):
         return Response(status=status.HTTP_404_NOT_FOUND)     
 
 
+    if request.method == "GET":
+        serializer = ArticleSerializer(article)
+        return Response(serializer.data)
+    
+    elif request.method == "PUT":
+        serializer = ArticleSerializer(article, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+
+
+
+
+
 # @csrf_exempt
 # def article_list(request):
 #     if request.method == 'GET':
