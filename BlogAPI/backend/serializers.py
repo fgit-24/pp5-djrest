@@ -6,3 +6,16 @@ class ArticleSerializer(serializers.Serializer):
     description = serializers.CharField()
     slug = serializers.SlugField(max_length=200, unique=True)
     published = serializers.DateTimeField(read_only=True)
+
+
+    def create(self, validated_data):
+        return Article.objects.create(**validated_data)
+    
+    
+    def update(self, instance, validated_data):
+        instance.title = validated_data.get('title', instance.title)
+        instance.description = validated_data.get('title', instance.title)
+        instance.slug = validated_data.get('title', instance.title)
+        instance.published = validated_data.get('title', instance.title)
+        instance.save()
+        return instance
