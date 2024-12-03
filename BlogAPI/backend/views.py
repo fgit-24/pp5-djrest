@@ -25,6 +25,11 @@ class ArticleList(mixins.ListModelMixin,
         return self.create(request, *args, **kwargs)
 
 
+class ArticleDetails(mixins.RetrieveModelMixin,
+                     mixins.UpdateModelMixin,
+                     mixins.DestroyModelMixin,
+                     generics.GenericAPIView):
+
 
 
 
