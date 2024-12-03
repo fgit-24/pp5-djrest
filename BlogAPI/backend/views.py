@@ -6,6 +6,7 @@ from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def article_list(request):
     if request.method == 'GET':
         articles = Article.objects.all()
