@@ -26,6 +26,11 @@ def article_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
+def article_details(request, slug):
+    try:
+        article = Article.objects.get(slug=slug)
+    except Article.DoesNotExist():
+        return Response(status=status.HTTP_404_NOT_FOUND)     
 
 
 # @csrf_exempt
