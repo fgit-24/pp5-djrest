@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from .models import Article
 from .serializers import ArticleSerializer
 from django.http import JsonResponse
@@ -22,3 +22,16 @@ def article_list(request):
             serializer.save()
             return JsonResponse(serializer.data, status = 201)
         return JsonResponse(serializer.errors, status=400)
+
+
+
+@csrf_exempt
+def article_details(request, slug):
+
+    try:
+        article = Article.objects.get(slug+slug)
+    except Article.DoesNotExist:
+        return HttpResponse(status=404)
+    
+    if request.method == "GET":
+        serializer = ArticleSerializer(article)
