@@ -29,7 +29,18 @@ class ArticleDetails(mixins.RetrieveModelMixin,
                      mixins.UpdateModelMixin,
                      mixins.DestroyModelMixin,
                      generics.GenericAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
 
+    
+    def get(self, request, slug, *args, **kwargs):
+        return self.retrieve(request, slug=slug)
+    
+    def put(self, request, slug, *args, **kwargs):
+        return self.update(request, slug=slug)
+    
+    def delete(self, request, slug):
+        return self.destroy(request, slug=slug)
 
 
 
