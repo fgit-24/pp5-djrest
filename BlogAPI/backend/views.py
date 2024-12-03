@@ -29,7 +29,7 @@ def article_list(request):
 def article_details(request, slug):
 
     try:
-        article = Article.objects.get(slug+slug)
+        article = Article.objects.get(slug=slug)
     except Article.DoesNotExist:
         return HttpResponse(status=404)
     
@@ -41,6 +41,7 @@ def article_details(request, slug):
         data = JSONParser().parse(request)
         serializer = ArticleSerializer(article, data=data)
         if serializer.is_valid():
+            serializer.save()
             return JsonResponse(serializer.data, status=200)
         return JsonResponse(serializer.errors, status=400)
     
