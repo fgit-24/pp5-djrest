@@ -3,6 +3,7 @@ from .models import Article
 from .serializers import ArticleSerializer
 from django.http import JsonResponse
 from rest_framework.parsers import JSONParser
+from django.views.decorators.csrf import csrf_exempt
 
 
 def article_list(request):
