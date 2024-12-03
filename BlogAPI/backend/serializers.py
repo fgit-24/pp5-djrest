@@ -4,7 +4,7 @@ from .models import Article
 class ArticleSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=200)
     description = serializers.CharField()
-    slug = serializers.SlugField(max_length=200, unique=True)
+    slug = serializers.SlugField(max_length=200)
     published = serializers.DateTimeField(read_only=True)
 
 
