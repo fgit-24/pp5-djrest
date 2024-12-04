@@ -20,6 +20,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pp5-djrest-0d2420c0a171.herokuapp.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
