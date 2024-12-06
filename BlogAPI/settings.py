@@ -17,7 +17,7 @@ SECRET_KEY = 'v1+us)&r&ek2+@9av8oui7%hst)tjv$ps7+vrw2#ky_y5mw@4d'
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pp5-djrest-0d2420c0a171.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pp5-djrest-0d2420c0a171.herokuapp.com', "https://frontend-f-e4828e1f7975.herokuapp.com"]
 
 
 
