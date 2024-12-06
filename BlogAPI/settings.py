@@ -12,12 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = 'v1+us)&r&ek2+@9av8oui7%hst)tjv$ps7+vrw2#ky_y5mw@4d'
+SECRET_KEY = 'c_ax!z*%n%rjdi#5!r$79=ng7ix_3_!^v9e$#!c&jzr=o_#1vy'
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'djrest-f-bfd9b0bcf48e.herokuapp.com/', "https://frontend-f-e4828e1f7975.herokuapp.com"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'djrest-f-bfd9b0bcf48e.herokuapp.com', "frontend-f-e4828e1f7975.herokuapp.com"]
 
 
 
