@@ -15,7 +15,9 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'djrest-f-bfd9b0bcf48e.herokuapp.com', "frontend-f-e4828e1f7975.herokuapp.com", "frontend-f-2bf7aea4b103.herokuapp.com"]
+
 
 
 # Application definition
