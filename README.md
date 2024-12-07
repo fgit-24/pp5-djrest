@@ -29,8 +29,8 @@ The site features a contact page and user registration and login.
     - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact-1)
     - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact-2)
   - [Testing](#testing)
-      - [Unit Tests backend](#unit-tests-backend)
-      - [Unit Tests contact](#unit-tests-contact)
+      - [Integration Tests backend](#integration-tests-backend)
+      - [Integration Tests contact](#integration-tests-contact)
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
       - [root\_route](#root_route)
@@ -75,13 +75,13 @@ I've also built a contact model.
 
 ## Testing
 
-#### Unit Tests backend
+#### Integration Tests backend
 
-![Testing Backend](documentation\testing\01-test-backend.png/)
+![Testing Backend](documentation/testing/01-test-backend.png/)
 
-#### Unit Tests contact
+#### Integration Tests contact
 
-![Testing Contact](documentation\testing\02-test-contact.png/)
+![Testing Contact](documentation/testing/02-test-contact.png/)
 
 
 ### Validation
@@ -224,7 +224,7 @@ Finally, click "Deploy Branch". Once the build process completes, your app shoul
 
 ### Cloning and Forking
 
-If you wish to clone or fork this project, you can do so from my [GitHub repository](https://github.com/fgit-24/PP5-Django-Restframework-API).
+If you wish to clone or fork this project, you can do so from my [GitHub repository](https://github.com/fgit-24/pp5-djrest).
 
 It's advisable to set up a virtual environment first.
 
