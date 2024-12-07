@@ -29,6 +29,8 @@ The site features a contact page and user registration and login.
     - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact-1)
     - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact-2)
   - [Testing](#testing)
+      - [Unit Tests backend](#unit-tests-backend)
+      - [Unit Tests contact](#unit-tests-contact)
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
       - [root\_route](#root_route)
@@ -46,7 +48,6 @@ The site features a contact page and user registration and login.
     - [Deployment Service](#deployment-service)
   - [Bugs](#bugs)
     - [Fixed Bugs](#fixed-bugs)
-    - [Bug Fix](#bug-fix)
   - [Credits](#credits)
 
 ## Design
@@ -73,6 +74,14 @@ I've also built a contact model.
 
 
 ## Testing
+
+#### Unit Tests backend
+
+![Testing Backend](documentation\testing\01-test-backend.png/)
+
+#### Unit Tests contact
+
+![Testing Contact](documentation\testing\02-test-contact.png/)
 
 
 ### Validation
@@ -289,11 +298,18 @@ This API was developed using Python.
 The project was deployed using [Heroku](https://www.heroku.com/).
 
 ## Bugs
+
 While developing the ArticleViewSet, you encountered an issue where users who are not the authors of an article were still able to view or edit articles that they did not create. The permissions were not properly restricting access to only the article authors, which was a critical issue for maintaining data integrity and ensuring that users could only modify their own content.
 
 ### Fixed Bugs
 
-### Bug Fix 
+Permissions Configuration:
+
+Ensure that the IsAuthenticated permission is in place to require that users are logged in.
+Introduce a custom permission (IsAuthor) to restrict write access to the authors only.
+Custom Permission Implementation (IsAuthor):
+
+The IsAuthor permission checks if the current user is the author of the article based on a author field in the Article model.
 
 
 ## Credits

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-TEST_RUNNER = 'pytest_django.run_tests'
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
