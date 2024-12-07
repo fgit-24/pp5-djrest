@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![Welcome Page](documentation\screenshots\01-welcome.png)
+![Welcome Page](documentation/screenshots/01-welcome.png/)
 
 Welcome to my RESTful API, created for my frontend React application, Blog.
 
@@ -25,9 +25,10 @@ The site features a contact page and user registration and login.
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Design](#design)
-    - [Entity Relational Diagram](#entity-relational-diagram)
+    - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact)
+    - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact-1)
+    - [Entity Relational Diagram Article and Contact](#entity-relational-diagram-article-and-contact-2)
   - [Testing](#testing)
-    - [Unit Tests](#unit-tests)
     - [Validation](#validation)
     - [Manual Testing](#manual-testing)
       - [root\_route](#root_route)
@@ -50,10 +51,19 @@ The site features a contact page and user registration and login.
 
 ## Design
 
-### Entity Relational Diagram
+### Entity Relational Diagram Article and Contact
 
-![ERD]()
+![ERD Article and Contact](documentation/screenshots/erd/01-article-contact.png/)
 
+
+### Entity Relational Diagram Article and Contact
+
+![ERD Article](documentation/screenshots/erd/02-article.png/)
+
+
+### Entity Relational Diagram Article and Contact
+
+![ERD Contact](documentation/screenshots/erd/03-contact.png/)
 
 In my design phase, I mapped out my models using a spreadsheet.
 
@@ -63,15 +73,6 @@ I've also built a contact model.
 
 
 ## Testing
-
-### Unit Tests
-
-I have developed approximately 50 automated tests for my views, all of which have passed.
-
-
-- backend view tests are available here: [Backend view tests]()
-
-- Contact view tests can be accessed here: [Likes view tests]()
 
 
 ### Validation

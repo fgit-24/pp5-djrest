@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+TEST_RUNNER = 'pytest_django.run_tests'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
