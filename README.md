@@ -299,7 +299,7 @@ The project was deployed using [Heroku](https://www.heroku.com/).
 
 ## Bugs
 
-While developing the ArticleViewSet, you encountered an issue where users who are not the authors of an article were still able to view or edit articles that they did not create. The permissions were not properly restricting access to only the article authors, which was a critical issue for maintaining data integrity and ensuring that users could only modify their own content.
+While developing the ArticleViewSet, I encountered an issue where users who are not the authors of an article were still able to view or edit articles that they did not create. The permissions were not properly restricting access to only the article authors, which was a critical issue for maintaining data integrity and ensuring that users could only modify their own content.
 
 ### Fixed Bugs
 
